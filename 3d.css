@@ -8,7 +8,14 @@ html, body {
     height: 100%;
     width: 100%;
     background: hwb(249 0% 86%);
-    color: #ffff;
+    color: #ffff;  
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none; 
+
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;                  /* WebKit */
 }
 .page1 {
     position: relative;
