@@ -1,4 +1,4 @@
-*{
+ *{
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    background: hwb(249 0% 86%);
+    background: hsl(249, 94%, 7%);
     color: #ffff;
 }
 .page1 {
@@ -21,15 +21,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0; 
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 nav a{
     text-decoration: none;
@@ -44,9 +36,6 @@ nav a{
 a{
     font-size: 1.5em;
     color: white;
-}
-nav a{
-    text-decoration: none;
 }
 nav h1.logo {
     font-size: 2em;
@@ -55,6 +44,7 @@ nav h1.logo {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
     position: relative;
+    z-index: 2;
 }
 a h1.logo::after{
         content: '';
@@ -77,6 +67,7 @@ a h1.logo:hover::after {
     position: relative;
     z-index: 1;
     text-decoration: none;
+   
 }
 .navigation a {
     text-transform: uppercase;
@@ -85,6 +76,7 @@ a h1.logo:hover::after {
 .home{
     position: relative;
     text-decoration: none;
+    z-index: 2;
 }
 .home::after{
     content: '';
@@ -211,12 +203,12 @@ a h1.logo:hover::after {
 .page1::before{
     content: '';
     position: absolute;
-    bottom: 15%;
+    bottom: -5%;
     left: -5%;
     width: 30rem;
     height: 20rem;
     filter: blur(100px);
-    background: hsl(249, 54%, 25%);
+    background: rgb(113, 98, 200);
     border-radius: 50%;
 }
 
@@ -228,13 +220,13 @@ a h1.logo:hover::after {
     width: 30rem;
     height: 20rem;
     filter: blur(100px);
-    background: hsl(249, 54%, 25%);
+    background: rgb(98, 73, 240);
     border-radius: 50%;
     z-index: 0;
 }
 .main .right {
     width: 40%;
-    height: 70vh;
+    height: 60vh;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -246,92 +238,5 @@ a h1.logo:hover::after {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
-}
-
-.image-container, .image-container1 , .image-container2 {
-    position: relative;
-    width: 15rem;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 1em;
-    margin: 0 auto;
-}
-.image-container img, .image-container1 img, .image-container2 img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.page2 {
-    position: relative;   /* important for ::before and ::after */
-    height: 100vh;
-    background: hwb(249 0% 86%);
-    overflow: hidden;  /* keeps blobs inside */
-    z-index: 1;
-    display: flex;             /* Add this */
-    flex-direction: row;            /* Side by side */
-    justify-content: space-around; /* Space between images */
-    align-items: center;            /* Vertically center images */
-    gap: 2em;    
-}
-
-/* Glow blob on bottom-left (like page1::before) */
-.page2::before {
-    content: '';
-    position: absolute;
-    bottom: -5%;
-    left: -5%;
-    width: 30rem;
-    height: 20rem;
-    filter: blur(100px);
-    background: hsl(249, 54%, 25%);
-    border-radius: 50%;
-    z-index: -1; /* Ensure it is behind the content */
-}
-
-/* Glow blob on top-right (like page1::after) */
-.page2::after {
-    content: '';
-    position: absolute;
-    top: 10%;
-    right: -10%;
-    width: 30rem;
-    height: 20rem;
-    filter: blur(100px);
-    background: hsl(251, 53%, 21%);
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.view_2 , .view_3 , .view_1 {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: hsl(251, 53%, 21%);
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.view_2:hover, .view_3:hover, .view_1:hover {
-    background: hsl(249, 54%, 25%);
-}
-.page2 > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    gap: 2em; /* Optional: adds space between images */
-}
-.page2 > div .container, .page2 > div .container1 , .page2 > div .container2 {
-    position: relative;
-    width: 25rem;
-    max-width: 600px;
-    overflow: hidden;
-    text-align: center;
+    transform: translate(-50%, -50%) scale(2);
 }
