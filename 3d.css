@@ -11,6 +11,7 @@ html, body {
     color: #ffff;  
     scrollbar-width: none;          /* Firefox */
     -ms-overflow-style: none; 
+   
 
 }
 html::-webkit-scrollbar,
@@ -152,6 +153,7 @@ a h1.logo:hover::after {
 .main {
     display: flex;
     height: calc(100vh - 5em); /* Added spaces around the minus sign */
+    z-index: 5;
 }
 .main .left{
     width: 60%;
@@ -172,6 +174,7 @@ a h1.logo:hover::after {
     line-height: 1.5;
     color: gray;
     width: 80%;
+    z-index: 1;
 }
 .but {
     display: flex;
@@ -228,6 +231,7 @@ a h1.logo:hover::after {
     filter: blur(100px);
     background: hsl(249, 54%, 25%);
     border-radius: 50%;
+    z-index: 0;
 }
 
 .page1::after{
@@ -247,7 +251,7 @@ a h1.logo:hover::after {
     height: 70vh;
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: -1;
 }
 
 #thereD {
